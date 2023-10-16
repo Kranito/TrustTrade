@@ -28,7 +28,7 @@ test_embedding_clip = torch.tensor([])
 
 def get_features(Dtype = 'train',data_set = 'cifar10'):
     '''
-    选择数据集返回对应的embedding
+    return correspond embedding
     :param dataset:
     :return:
     '''
@@ -75,7 +75,7 @@ torch.save(a, './cifar100-clip.pt',_use_new_zipfile_serialization=False)
 #     elif dataset == 'train':
 #         X, lables = get_features(TRAIN_DATASET)
 #     else:
-#         print("选择的数据集有误")
+#         print("wrong dataset")
 #
 #     import csv
 #     if not os.path.exists("decision_value_test.csv"):
@@ -119,7 +119,7 @@ torch.save(a, './cifar100-clip.pt',_use_new_zipfile_serialization=False)
 #
 # embedding_mean = []
 # embedding_dev = []
-# #对每个点计算PC的方差均值
+
 # print(test_embedding_PCA[0])
 # for testpoint_idx in range(0,len(test_embedding_PCA)):
 #     embedding_mean.append(mean(test_embedding_PCA[testpoint_idx][1:]))
