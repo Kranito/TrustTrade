@@ -187,9 +187,9 @@ class iter_purchase():
         for i in range(self.iter_time):
             print(f'round{i} started!')
             self.UAS()
-            print(f'目前准确度：{self.acc_record}')
+            print(f'acc：{self.acc_record}')
             print(f'round{i} finished!')
-        print(f"最终准确度为：{self.acc_record}")
+        print(f"final acc：{self.acc_record}")
         return self.acc_record
 
 def UAS_checkpoint(dataset,budget,ebd_method,data_num=3000):
@@ -335,5 +335,5 @@ if __name__ == '__main__':
         acc_all.append(acc_list)
         print(acc_all)
 
-    print(f"方法为{run_type}，准确度为{acc_all}")
+    print(f"method:{run_type}，accuracy:{acc_all}")
 
